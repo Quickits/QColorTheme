@@ -1,1 +1,1 @@
-# QColorTheme
+# Rainbow
