@@ -34,7 +34,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
                 android:text="Primary Color"
                 android:textAppearance="?textAppearanceSubtitle1" />
 
@@ -43,13 +46,14 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:clickable="false"
-                android:focusable="false">
+                android:focusable="false"
+                app:cardCornerRadius="4dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="8dp">
 
                     <com.google.android.material.chip.ChipGroup
                         android:id="@+id/chip_group_primary"
@@ -66,7 +70,10 @@
                 android:id="@+id/tv_secondary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
                 android:text="Secondary Color"
                 android:textAppearance="?textAppearanceSubtitle1" />
 
@@ -76,13 +83,14 @@
                 android:layout_margin="8dp"
                 android:clickable="false"
                 android:focusable="false"
-                android:visibility="visible">
+                android:visibility="visible"
+                app:cardCornerRadius="4dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="8dp">
 
                     <com.google.android.material.chip.ChipGroup
                         android:id="@+id/chip_group_secondary"

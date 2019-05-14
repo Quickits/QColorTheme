@@ -43,7 +43,7 @@ class ThemeSwitcherFragment : BaseFragment() {
         ) { themeSecondaryColor = it }
 
         fab_apply.setOnClickListener {
-            Rainbow.apply(activity, themePrimaryColor, themeSecondaryColor)
+            Rainbow.setupThemeOverlays(activity, themePrimaryColor, themeSecondaryColor)
         }
     }
 

@@ -18,7 +18,7 @@ object Rainbow {
     @StyleRes
     internal var themeSecondaryColor: Int = -1
 
-    internal fun apply(activity: Activity?, themePrimaryColor: Int, themeSecondaryColor: Int) {
+    internal fun setupThemeOverlays(activity: Activity?, themePrimaryColor: Int, themeSecondaryColor: Int) {
         this.themePrimaryColor = themePrimaryColor
         this.themeSecondaryColor = themeSecondaryColor
 
