@@ -13,21 +13,18 @@ import androidx.annotation.StyleRes
 object Rainbow {
 
     @StyleRes
-    private var themeOverlays: Array<Int> = emptyArray()
+    internal var themePrimaryColor: Int = 0
 
-    fun setThemeOverlays(activity: Activity?) {
-        activity ?: return
-
-        themeOverlays =
-            arrayOf(R.style.ThemeOverlay_PrimaryPalette_Blue, R.style.ThemeOverlay_SecondaryPalette_BlueGrey)
-
+    fun apply(activity: Activity) {
         activity.recreate()
     }
 
     fun applyThemeOverlays(activity: Activity) {
-        for (themeOverlay in themeOverlays) {
-            activity.setTheme(themeOverlay)
-        }
+        apply(activity, themePrimaryColor)
+    }
+
+    private fun apply(activity: Activity, theme: Int) {
+        if (theme != 0) activity.setTheme(theme)
     }
 
 }
