@@ -3,7 +3,7 @@ package cn.quickits.rainbow.theme
 import androidx.annotation.ArrayRes
 import cn.quickits.rainbow.R
 
-object ThemeSwitcherResourceProvider {
+object ThemeValueResourceProvider {
 
     @ArrayRes
     var primaryColors: Int = R.array.mtrl_primary_palettes

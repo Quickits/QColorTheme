@@ -15,8 +15,8 @@ class ThemeSwitcherViewModel : QLceViewModel<List<ThemeValue>>() {
     fun load(resource: Resources) {
         displayLoader(false)
 
-        val primaryValues = resource.obtainTypedArray(ThemeSwitcherResourceProvider.primaryColors)
-        val secondaryValues = resource.obtainTypedArray(ThemeSwitcherResourceProvider.secondaryColors)
+        val primaryValues = resource.obtainTypedArray(ThemeValueResourceProvider.primaryColors)
+        val secondaryValues = resource.obtainTypedArray(ThemeValueResourceProvider.secondaryColors)
 
         val list = arrayListOf<ThemeValue>()
 

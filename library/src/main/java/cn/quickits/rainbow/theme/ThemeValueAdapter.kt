@@ -2,6 +2,7 @@ package cn.quickits.rainbow.theme
 
 import android.app.Activity
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import cn.quickits.rainbow.R
@@ -15,7 +16,7 @@ import kotlinx.android.synthetic.main.item_theme_value.view.*
  * @author: gavinliu
  * @create: 2019-05-14 17:47
  **/
-class ThemeValueAdapter : RecyclerView.Adapter<ThemeValueViewHolder>() {
+class ThemeValueAdapter : RecyclerView.Adapter<ThemeValueAdapter.ThemeValueViewHolder>() {
 
     var list: List<ThemeValue>? = null
 
@@ -39,5 +40,7 @@ class ThemeValueAdapter : RecyclerView.Adapter<ThemeValueViewHolder>() {
             Rainbow.apply(it.context as Activity)
         }
     }
+
+    inner class ThemeValueViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
 }

@@ -19,7 +19,7 @@ import cn.quickits.rainbow.R
  **/
 class ThemeSwitcherFragment : QLceViewFragment<List<ThemeValue>, ThemeSwitcherViewModel, RecyclerView>() {
 
-    lateinit var adapter: ThemeValueAdapter
+    private lateinit var adapter: ThemeValueAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

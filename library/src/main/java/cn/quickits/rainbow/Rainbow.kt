@@ -15,7 +15,7 @@ object Rainbow {
     @StyleRes
     internal var themePrimaryColor: Int = 0
 
-    fun apply(activity: Activity) {
+    internal fun apply(activity: Activity) {
         activity.recreate()
     }
 
@@ -23,7 +23,7 @@ object Rainbow {
         apply(activity, themePrimaryColor)
     }
 
-    private fun apply(activity: Activity, theme: Int) {
+    private fun apply(activity: Activity, @StyleRes theme: Int) {
         if (theme != 0) activity.setTheme(theme)
     }
 
