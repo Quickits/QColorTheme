@@ -15,12 +15,16 @@ object Rainbow {
     @StyleRes
     internal var themePrimaryColor: Int = 0
 
-    internal fun apply(activity: Activity) {
-        activity.recreate()
+    @StyleRes
+    internal var themeSecondaryColor: Int = 0
+
+    internal fun apply(activity: Activity?) {
+        activity?.recreate()
     }
 
     fun applyThemeOverlays(activity: Activity) {
         apply(activity, themePrimaryColor)
+        apply(activity, themeSecondaryColor)
     }
 
     private fun apply(activity: Activity, @StyleRes theme: Int) {

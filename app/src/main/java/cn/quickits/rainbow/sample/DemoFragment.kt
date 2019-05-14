@@ -25,7 +25,7 @@ class DemoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
-        btn.setOnClickListener { findNavController().navigate(R.id.action_demoFragment_to_themeSwitcherFragment) }
+        btn.setOnClickListener { findNavController().navigate(R.id.action_demoFragment_to_themeSwitcherFragment2) }
     }
 
 }
