@@ -32,7 +32,7 @@ class ThemeSwitcherFragment : QLceViewFragment<List<ThemeValue>, ThemeSwitcherVi
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.load(resources)
+        viewModel.load(view.context, resources)
 
         adapter = ThemeValueAdapter()
         contentView.adapter = adapter

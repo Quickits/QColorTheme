@@ -35,8 +35,9 @@ class ThemeValueAdapter : RecyclerView.Adapter<ThemeValueAdapter.ThemeValueViewH
     override fun onBindViewHolder(holder: ThemeValueViewHolder, position: Int) {
         val value = list?.get(position) ?: return
 
+        holder.itemView.text.setTextColor(value.value)
         holder.itemView.btn.setOnClickListener {
-            Rainbow.themePrimaryColor = value.primaryColor
+            Rainbow.themePrimaryColor = value.res
             Rainbow.apply(it.context as Activity)
         }
     }
