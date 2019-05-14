@@ -11,18 +11,11 @@
         <action
             android:id="@+id/action_demoFragment_to_themeSwitcherFragment"
             app:destination="@id/themeSwitcherFragment" />
-        <action
-            android:id="@+id/action_demoFragment_to_themeSwitcherFragment2"
-            app:destination="@id/themeSwitcherFragment2" />
     </fragment>
 
     <fragment
         android:id="@+id/themeSwitcherFragment"
         android:name="cn.quickits.rainbow.theme.ThemeSwitcherFragment"
         android:label="ThemeSwitcherDialogFragment" />
-    <fragment
-        android:id="@+id/themeSwitcherFragment2"
-        android:name="cn.quickits.rainbow.theme.ThemeSwitcherFragment2"
-        android:label="ThemeSwitcherFragment2" />
 
 </navigation>

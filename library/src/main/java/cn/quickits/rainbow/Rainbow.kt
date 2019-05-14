@@ -13,12 +13,15 @@ import androidx.annotation.StyleRes
 object Rainbow {
 
     @StyleRes
-    internal var themePrimaryColor: Int = 0
+    internal var themePrimaryColor: Int = -1
 
     @StyleRes
-    internal var themeSecondaryColor: Int = 0
+    internal var themeSecondaryColor: Int = -1
 
-    internal fun apply(activity: Activity?) {
+    internal fun apply(activity: Activity?, themePrimaryColor: Int, themeSecondaryColor: Int) {
+        this.themePrimaryColor = themePrimaryColor
+        this.themeSecondaryColor = themeSecondaryColor
+
         activity?.recreate()
     }
 
@@ -28,7 +31,7 @@ object Rainbow {
     }
 
     private fun apply(activity: Activity, @StyleRes theme: Int) {
-        if (theme != 0) activity.setTheme(theme)
+        if (theme != -1) activity.setTheme(theme)
     }
 
 }

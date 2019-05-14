@@ -26,4 +26,17 @@
         <item>@style/ThemeOverlay.SecondaryPalette.BlueGrey</item>
     </array>
 
+    <array name="mtrl_palettes_content_description">
+        <item>@string/mtrl_red</item>
+        <item>@string/mtrl_purple</item>
+        <item>@string/mtrl_indigo</item>
+        <item>@string/mtrl_blue</item>
+        <item>@string/mtrl_green</item>
+        <item>@string/mtrl_yellow</item>
+        <item>@string/mtrl_orange</item>
+        <item>@string/mtrl_brown</item>
+        <item>@string/mtrl_grey</item>
+        <item>@string/mtrl_blue_grey</item>
+    </array>
+
 </resources>

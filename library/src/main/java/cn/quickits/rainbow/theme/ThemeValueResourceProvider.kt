@@ -11,4 +11,7 @@ object ThemeValueResourceProvider {
     @ArrayRes
     var secondaryColors: Int = R.array.mtrl_secondary_palettes
 
+    @ArrayRes
+    val colorDesc: Int = R.array.mtrl_palettes_content_description
+
 }
