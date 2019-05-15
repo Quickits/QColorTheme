@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <declare-styleable name="SystemBarLightMode">
+        <attr name="isLightStatusBar" format="boolean" />
+        <attr name="isLightNavigationBar" format="boolean" />
+    </declare-styleable>
+
     <attr name="bottomNavigationView" format="reference" />
     <attr name="bottomNavigationViewColored" format="reference" />
 </resources>

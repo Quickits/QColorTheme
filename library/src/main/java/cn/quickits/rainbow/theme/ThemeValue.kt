@@ -7,4 +7,9 @@ package cn.quickits.rainbow.theme
  * @author: gavinliu
  * @create: 2019-05-14 17:23
  **/
-data class ThemeValue(val res: Int, val value: Int)
+data class ThemeValue(
+    val res: Int,
+    val value: Int,
+    val isLightStatusBar: Boolean = false,
+    val isLightNavigationBar: Boolean = false
+)

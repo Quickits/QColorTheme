@@ -2,6 +2,8 @@
 <resources>
 
     <style name="Base.ThemeOverlay.PrimaryPalette" parent="">
+        <item name="isLightStatusBar">false</item>
+        <item name="isLightNavigationBar">false</item>
         <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
         <item name="bottomNavigationViewColored">@style/Widget.MaterialComponents.BottomNavigationView.Colored</item>
     </style>
@@ -122,15 +124,15 @@
         <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
     </style>
 
-    <style name="Base.ThemeOverlay.PrimaryPalette.White" parent="ThemeOverlay.PrimaryPalette">
+    <style name="ThemeOverlay.PrimaryPalette.White">
         <item name="colorPrimary">#ffffff</item>
         <item name="colorPrimaryDark">#ffffff</item>
-
         <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Light.BottomLine</item>
         <item name="bottomNavigationView">@style/Widget.Rainbow.BottomNavigationView.White</item>
         <item name="bottomNavigationViewColored">@style/Widget.Rainbow.BottomNavigationView.Colored.White</item>
-    </style>
 
-    <style name="ThemeOverlay.PrimaryPalette.White" parent="Base.ThemeOverlay.PrimaryPalette.White" />
+        <item name="isLightStatusBar">true</item>
+        <item name="isLightNavigationBar">true</item>
+    </style>
 
 </resources>

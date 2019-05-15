@@ -3,6 +3,7 @@ package cn.quickits.rainbow.theme
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import androidx.collection.ArrayMap
 import cn.quickits.arch.mvvm.base.BaseFragment
 import cn.quickits.rainbow.R
 import cn.quickits.rainbow.Rainbow
@@ -23,6 +24,12 @@ class ThemeSwitcherFragment : BaseFragment() {
 
     private var themeSecondaryColor: Int = -1
 
+    private var isLightStatusBar: Boolean = false
+
+    private var isLightNavigationBar: Boolean = false
+
+    private var arrayMap: ArrayMap<Int, ThemeValue> = ArrayMap()
+
     override fun bindLayoutId(): Int = R.layout.fragment_switcher
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -32,18 +39,31 @@ class ThemeSwitcherFragment : BaseFragment() {
             chip_group_primary,
             ThemeValueResourceProvider.primaryColors,
             intArrayOf(R.attr.colorPrimary),
-            ThemeValueResourceProvider.colorDesc
-        ) { themePrimaryColor = it }
+            ThemeValueResourceProvider.colorDesc,
+            true
+        ) {
+            themePrimaryColor = it?.res ?: -1
+            isLightStatusBar = it?.isLightStatusBar ?: false
+            isLightNavigationBar = it?.isLightNavigationBar ?: false
+        }
 
         setupChipGroup(
             chip_group_secondary,
             ThemeValueResourceProvider.secondaryColors,
             intArrayOf(R.attr.colorAccent),
-            ThemeValueResourceProvider.colorDesc
-        ) { themeSecondaryColor = it }
+            ThemeValueResourceProvider.colorDesc,
+            false
+        ) {
+            themeSecondaryColor = it?.res ?: -1
+        }
 
         fab_apply.setOnClickListener {
-            Rainbow.setupThemeOverlays(activity, intArrayOf(themePrimaryColor, themeSecondaryColor))
+            Rainbow.setupThemeOverlays(
+                activity,
+                intArrayOf(themePrimaryColor, themeSecondaryColor),
+                isLightStatusBar,
+                isLightNavigationBar
+            )
         }
     }
 
@@ -52,7 +72,8 @@ class ThemeSwitcherFragment : BaseFragment() {
         colors: Int,
         attr: IntArray,
         descs: Int,
-        select: (Int) -> Unit
+        isPrimary: Boolean,
+        select: (ThemeValue?) -> Unit
     ) {
         val colorValues = resources.obtainTypedArray(colors)
         val descValues = resources.obtainTypedArray(descs)
@@ -65,6 +86,17 @@ class ThemeSwitcherFragment : BaseFragment() {
             val a = context?.obtainStyledAttributes(primaryValue, attr)
             val value = a?.getColor(0, Color.TRANSPARENT) ?: 0
             a?.recycle()
+
+            var isLightStatusBar = false
+            var isLightNavigationBar = false
+
+            if (isPrimary) {
+                val a2 = context?.obtainStyledAttributes(primaryValue, R.styleable.SystemBarLightMode)
+                isLightStatusBar = a?.getBoolean(R.styleable.SystemBarLightMode_isLightStatusBar, false) ?: false
+                isLightNavigationBar =
+                    a?.getBoolean(R.styleable.SystemBarLightMode_isLightNavigationBar, false) ?: false
+                a2?.recycle()
+            }
 
             val chip = layoutInflater.inflate(R.layout.item_theme_value_chip, chipGroup, false) as Chip
             chip.id = primaryValue
@@ -79,11 +111,13 @@ class ThemeSwitcherFragment : BaseFragment() {
                 R.id.chip_group_secondary -> if (themeSecondaryColor == primaryValue) checkChipId = primaryValue
             }
 
+            arrayMap[primaryValue] = ThemeValue(primaryValue, value, isLightStatusBar, isLightNavigationBar)
+
             chipGroup.addView(chip)
         }
 
         chipGroup.check(checkChipId)
-        chipGroup.setOnCheckedChangeListener { _, id -> select(id) }
+        chipGroup.setOnCheckedChangeListener { _, id -> select(arrayMap[id]) }
 
         colorValues.recycle()
         descValues.recycle()
