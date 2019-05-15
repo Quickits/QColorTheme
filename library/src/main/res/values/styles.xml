@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="Theme.Rainbow.Light.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
+        <item name="bottomNavigationView">@style/Widget.MaterialComponents.BottomNavigationView</item>
+        <item name="bottomNavigationViewColored">@style/Widget.MaterialComponents.BottomNavigationView.Colored</item>
+    </style>
+
     <style name="Widget.Rainbow.Toolbar.Light" parent="Widget.MaterialComponents.Toolbar">
         <item name="titleTextColor">@color/primary_text_default_material_light</item>
         <item name="subtitleTextColor">@color/abc_secondary_text_material_light</item>
@@ -17,6 +23,15 @@
 
     <style name="Widget.Rainbow.Toolbar.Dark.BottomLine">
         <item name="android:background">@drawable/bg_toolbar_with_bottom_line</item>
+    </style>
+
+    <style name="Widget.Rainbow.BottomNavigationView.White" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconTint">@color/rainbow_bottom_nav_item_tint_with_accent</item>
+        <item name="itemTextColor">@color/rainbow_bottom_nav_item_tint_with_accent</item>
+    </style>
+
+    <style name="Widget.Rainbow.BottomNavigationView.Colored.White" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="android:background">?attr/colorAccent</item>
     </style>
 
 </resources>

@@ -58,5 +58,22 @@
 
     </ScrollView>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnavigation1"
+        style="?bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_animated_menu" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnavigation2"
+        style="?bottomNavigationViewColored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomnavigation1"
+        app:menu="@menu/bottom_nav_animated_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
