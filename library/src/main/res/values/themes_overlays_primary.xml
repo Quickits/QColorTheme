@@ -114,4 +114,11 @@
         <item name="colorPrimaryDark">#29434e</item>
         <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
     </style>
+
+    <style name="ThemeOverlay.PrimaryPalette.White" parent="">
+        <item name="colorPrimary">#ffffff</item>
+        <item name="colorPrimaryDark">#ffffff</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Light.BottomLine</item>
+    </style>
+
 </resources>

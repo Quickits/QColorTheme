@@ -20,6 +20,7 @@
         <item>@style/ThemeOverlay.PrimaryPalette.Brown</item>
         <item>@style/ThemeOverlay.PrimaryPalette.Grey</item>
         <item>@style/ThemeOverlay.PrimaryPalette.BlueGrey</item>
+        <item>@style/ThemeOverlay.PrimaryPalette.White</item>
     </array>
 
     <array name="mtrl_secondary_palettes">
@@ -42,6 +43,7 @@
         <item>@style/ThemeOverlay.SecondaryPalette.Brown</item>
         <item>@style/ThemeOverlay.SecondaryPalette.Grey</item>
         <item>@style/ThemeOverlay.SecondaryPalette.BlueGrey</item>
+        <item>@style/ThemeOverlay.SecondaryPalette.White</item>
     </array>
 
     <array name="mtrl_palettes_content_description">
@@ -64,6 +66,7 @@
         <item>@string/mtrl_brown</item>
         <item>@string/mtrl_grey</item>
         <item>@string/mtrl_blue_grey</item>
+        <item>@string/mtrl_white</item>
     </array>
 
 </resources>

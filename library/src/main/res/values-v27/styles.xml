@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ThemeOverlay.PrimaryPalette.White" parent="">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+
+        <item name="colorPrimary">#ffffff</item>
+        <item name="colorPrimaryDark">#ffffff</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Light.BottomLine</item>
+    </style>
+
+</resources>

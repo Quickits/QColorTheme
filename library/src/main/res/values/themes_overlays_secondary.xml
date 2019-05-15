@@ -77,4 +77,8 @@
         <item name="colorAccent">#546e7a</item>
     </style>
 
+    <style name="ThemeOverlay.SecondaryPalette.White" parent="">
+        <item name="colorAccent">#ffffff</item>
+    </style>
+
 </resources>

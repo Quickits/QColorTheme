@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Rainbow.Light.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
-
-    </style>
-
     <style name="Widget.Rainbow.Toolbar.Light" parent="Widget.MaterialComponents.Toolbar">
         <item name="titleTextColor">@color/primary_text_default_material_light</item>
         <item name="subtitleTextColor">@color/abc_secondary_text_material_light</item>
