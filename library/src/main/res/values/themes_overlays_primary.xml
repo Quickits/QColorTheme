@@ -1,52 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="ThemeOverlay.PrimaryPalette.Red" parent="">
         <item name="colorPrimary">#e53935</item>
         <item name="colorPrimaryDark">#ab000d</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
+    </style>
+
+    <style name="ThemeOverlay.PrimaryPalette.Pink" parent="">
+        <item name="colorPrimary">#d81b60</item>
+        <item name="colorPrimaryDark">#a00037</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
     </style>
 
     <style name="ThemeOverlay.PrimaryPalette.Purple" parent="">
         <item name="colorPrimary">#8e24aa</item>
         <item name="colorPrimaryDark">#5c007a</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
+    </style>
+
+    <style name="ThemeOverlay.PrimaryPalette.DeepPurple" parent="">
+        <item name="colorPrimary">#5e35b1</item>
+        <item name="colorPrimaryDark">#280680</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
     </style>
 
     <style name="ThemeOverlay.PrimaryPalette.Indigo" parent="">
         <item name="colorPrimary">#3949ab</item>
         <item name="colorPrimaryDark">#00227b</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
     </style>
 
     <style name="ThemeOverlay.PrimaryPalette.Blue" parent="">
         <item name="colorPrimary">#1b87e5</item>
         <item name="colorPrimaryDark">#005bb2</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
+    </style>
+
+    <style name="ThemeOverlay.PrimaryPalette.LightBlue" parent="">
+        <item name="colorPrimary">#039be5</item>
+        <item name="colorPrimaryDark">#006db3</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
+    </style>
+
+    <style name="ThemeOverlay.PrimaryPalette.Cyan" parent="">
+        <item name="colorPrimary">#00acc1</item>
+        <item name="colorPrimaryDark">#007c91</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
+    </style>
+
+    <style name="ThemeOverlay.PrimaryPalette.Teal" parent="">
+        <item name="colorPrimary">#00897b</item>
+        <item name="colorPrimaryDark">#005b4f</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
     </style>
 
     <style name="ThemeOverlay.PrimaryPalette.Green" parent="">
         <item name="colorPrimary">#43a047</item>
         <item name="colorPrimaryDark">#00701a</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
+    </style>
+
+    <style name="ThemeOverlay.PrimaryPalette.LightGreen" parent="">
+        <item name="colorPrimary">#7cb342</item>
+        <item name="colorPrimaryDark">#4b830d</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
+    </style>
+
+    <style name="ThemeOverlay.PrimaryPalette.Lime" parent="">
+        <item name="colorPrimary">#c0ca33</item>
+        <item name="colorPrimaryDark">#8c9900</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
     </style>
 
     <style name="ThemeOverlay.PrimaryPalette.Yellow" parent="">
         <item name="colorPrimary">#fdd835</item>
         <item name="colorPrimaryDark">#c6a700</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
+    </style>
+
+    <style name="ThemeOverlay.PrimaryPalette.Amber" parent="">
+        <item name="colorPrimary">#ffb300</item>
+        <item name="colorPrimaryDark">#c68400</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
     </style>
 
     <style name="ThemeOverlay.PrimaryPalette.Orange" parent="">
         <item name="colorPrimary">#fb8c00</item>
         <item name="colorPrimaryDark">#c25e00</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
+    </style>
+
+    <style name="ThemeOverlay.PrimaryPalette.DeepOrange" parent="">
+        <item name="colorPrimary">#f4511e</item>
+        <item name="colorPrimaryDark">#b91400</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
     </style>
 
     <style name="ThemeOverlay.PrimaryPalette.Brown" parent="">
         <item name="colorPrimary">#6d4c41</item>
         <item name="colorPrimaryDark">#40241a</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
     </style>
 
     <style name="ThemeOverlay.PrimaryPalette.Grey" parent="">
         <item name="colorPrimary">#757575</item>
         <item name="colorPrimaryDark">#494949</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
     </style>
 
     <style name="ThemeOverlay.PrimaryPalette.BlueGrey" parent="">
         <item name="colorPrimary">#546e7a</item>
         <item name="colorPrimaryDark">#29434e</item>
+        <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
     </style>
 </resources>

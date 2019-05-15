@@ -2,6 +2,7 @@ package cn.quickits.rainbow
 
 import android.app.Activity
 import androidx.annotation.StyleRes
+import java.util.*
 
 
 /**
@@ -13,21 +14,17 @@ import androidx.annotation.StyleRes
 object Rainbow {
 
     @StyleRes
-    internal var themePrimaryColor: Int = -1
+    private var themeOverlays = IntArray(0)
 
-    @StyleRes
-    internal var themeSecondaryColor: Int = -1
-
-    internal fun setupThemeOverlays(activity: Activity?, themePrimaryColor: Int, themeSecondaryColor: Int) {
-        this.themePrimaryColor = themePrimaryColor
-        this.themeSecondaryColor = themeSecondaryColor
-
-        activity?.recreate()
+    internal fun setupThemeOverlays(activity: Activity?, themeOverlays: IntArray) {
+        if (!Arrays.equals(this.themeOverlays, themeOverlays)) {
+            this.themeOverlays = themeOverlays
+            activity?.recreate()
+        }
     }
 
     fun applyThemeOverlays(activity: Activity) {
-        apply(activity, themePrimaryColor)
-        apply(activity, themeSecondaryColor)
+        themeOverlays.forEach { apply(activity, it) }
     }
 
     private fun apply(activity: Activity, @StyleRes theme: Int) {

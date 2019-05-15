@@ -19,9 +19,9 @@ import kotlinx.android.synthetic.main.fragment_switcher.*
  **/
 class ThemeSwitcherFragment : BaseFragment() {
 
-    private var themePrimaryColor: Int = Rainbow.themePrimaryColor
+    private var themePrimaryColor: Int = -1
 
-    private var themeSecondaryColor: Int = Rainbow.themeSecondaryColor
+    private var themeSecondaryColor: Int = -1
 
     override fun bindLayoutId(): Int = R.layout.fragment_switcher
 
@@ -43,7 +43,7 @@ class ThemeSwitcherFragment : BaseFragment() {
         ) { themeSecondaryColor = it }
 
         fab_apply.setOnClickListener {
-            Rainbow.setupThemeOverlays(activity, themePrimaryColor, themeSecondaryColor)
+            Rainbow.setupThemeOverlays(activity, intArrayOf(themePrimaryColor, themeSecondaryColor))
         }
     }
 
@@ -75,18 +75,15 @@ class ThemeSwitcherFragment : BaseFragment() {
             chip.setTextColor(value)
 
             when (chipGroup.id) {
-                R.id.chip_group_primary -> if (Rainbow.themePrimaryColor == primaryValue) checkChipId = primaryValue
-                R.id.chip_group_secondary -> if (Rainbow.themeSecondaryColor == primaryValue) checkChipId = primaryValue
+                R.id.chip_group_primary -> if (themePrimaryColor == primaryValue) checkChipId = primaryValue
+                R.id.chip_group_secondary -> if (themeSecondaryColor == primaryValue) checkChipId = primaryValue
             }
 
             chipGroup.addView(chip)
         }
 
         chipGroup.check(checkChipId)
-        chipGroup.setOnCheckedChangeListener { _, id ->
-            println(id)
-            select(id)
-        }
+        chipGroup.setOnCheckedChangeListener { _, id -> select(id) }
 
         colorValues.recycle()
         descValues.recycle()

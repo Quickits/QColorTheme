@@ -9,14 +9,15 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:elevation="0dp"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
+            style="?toolbarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="Theme Switcher"
-            app:titleTextColor="@android:color/white" />
+            app:title="Theme Switcher" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -37,7 +38,6 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginBottom="8dp"
                 android:text="Primary Color"
                 android:textAppearance="?textAppearanceSubtitle1" />
 
@@ -73,7 +73,6 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginBottom="8dp"
                 android:text="Secondary Color"
                 android:textAppearance="?textAppearanceSubtitle1" />
 
@@ -96,6 +95,8 @@
                         android:id="@+id/chip_group_secondary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
                         app:chipSpacing="8dp"
                         app:singleSelection="true" />
 
