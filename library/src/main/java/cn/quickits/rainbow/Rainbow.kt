@@ -24,16 +24,9 @@ object Rainbow {
 
     private var isLightNavigationBar = false
 
-    fun setupThemeOverlays(
-        activity: Activity?,
-        themeOverlays: IntArray,
-        isLightStatusBar: Boolean,
-        isLightNavigationBar: Boolean
-    ) {
-        if (!this.themeOverlays.contentEquals(themeOverlays)) {
-            this.themeOverlays = themeOverlays
-            this.isLightStatusBar = isLightStatusBar
-            this.isLightNavigationBar = isLightNavigationBar
+    fun setupThemeOverlays(activity: Activity?, primary: Int, secondary: Int) {
+        if (!this.themeOverlays.contentEquals(intArrayOf(primary, secondary))) {
+            initThemeOverlays(activity, primary, secondary)
             activity?.recreate()
         }
     }
