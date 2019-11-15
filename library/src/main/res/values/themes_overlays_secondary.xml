@@ -1,83 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="ThemeOverlay.SecondaryPalette.Red" parent="">
+    <style name="ThemeOverlay.SecondaryPalette" parent="">
+
+    </style>
+
+    <style name="ThemeOverlay.SecondaryPalette.Red">
         <item name="colorAccent">#e53935</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.Pink" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.Pink">
         <item name="colorAccent">#d81b60</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.Purple" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.Purple">
         <item name="colorAccent">#8e24aa</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.DeepPurple" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.DeepPurple">
         <item name="colorAccent">#5e35b1</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.Indigo" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.Indigo">
         <item name="colorAccent">#3949ab</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.Blue" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.Blue">
         <item name="colorAccent">#1b87e5</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.LightBlue" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.LightBlue">
         <item name="colorAccent">#039be5</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.Cyan" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.Cyan">
         <item name="colorAccent">#00acc1</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.Teal" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.Teal">
         <item name="colorAccent">#00897b</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.Green" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.Green">
         <item name="colorAccent">#43a047</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.LightGreen" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.LightGreen">
         <item name="colorAccent">#7cb342</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.Lime" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.Lime">
         <item name="colorAccent">#c0ca33</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.Yellow" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.Yellow">
         <item name="colorAccent">#fdd835</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.Amber" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.Amber">
         <item name="colorAccent">#ffb300</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.Orange" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.Orange">
         <item name="colorAccent">#fb8c00</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.DeepOrange" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.DeepOrange">
         <item name="colorAccent">#f4511e</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.Brown" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.Brown">
         <item name="colorAccent">#6d4c41</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.Grey" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.Grey">
         <item name="colorAccent">#757575</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.BlueGrey" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.BlueGrey">
         <item name="colorAccent">#546e7a</item>
     </style>
 
-    <style name="ThemeOverlay.SecondaryPalette.White" parent="">
+    <style name="ThemeOverlay.SecondaryPalette.White">
         <item name="colorAccent">#ffffff</item>
     </style>
 

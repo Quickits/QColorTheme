@@ -38,12 +38,12 @@ object Rainbow {
         }
     }
 
-    fun initThemeOverlays(context: Context?, primary: Int, secend: Int) {
+    fun initThemeOverlays(context: Context?, primary: Int, secondary: Int) {
         val a = context?.obtainStyledAttributes(primary, R.styleable.SystemBarLightMode)
         isLightStatusBar = a?.getBoolean(R.styleable.SystemBarLightMode_isLightStatusBar, false) ?: false
         isLightNavigationBar = a?.getBoolean(R.styleable.SystemBarLightMode_isLightNavigationBar, false) ?: false
         a?.recycle()
-        this.themeOverlays = intArrayOf(primary, secend)
+        this.themeOverlays = intArrayOf(primary, secondary)
     }
 
     fun applyThemeOverlays(activity: Activity) {
