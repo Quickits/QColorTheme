@@ -92,9 +92,8 @@ class ThemeSwitcherFragment : BaseFragment() {
 
             if (isPrimary) {
                 val a2 = context?.obtainStyledAttributes(primaryValue, R.styleable.SystemBarLightMode)
-                isLightStatusBar = a?.getBoolean(R.styleable.SystemBarLightMode_isLightStatusBar, false) ?: false
-                isLightNavigationBar =
-                    a?.getBoolean(R.styleable.SystemBarLightMode_isLightNavigationBar, false) ?: false
+                isLightStatusBar = a2?.getBoolean(R.styleable.SystemBarLightMode_isLightStatusBar, false) ?: false
+                isLightNavigationBar = a2?.getBoolean(R.styleable.SystemBarLightMode_isLightNavigationBar, false) ?: false
                 a2?.recycle()
             }
 

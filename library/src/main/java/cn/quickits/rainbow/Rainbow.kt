@@ -1,6 +1,7 @@
 package cn.quickits.rainbow
 
 import android.app.Activity
+import android.content.Context
 import android.graphics.Color
 import android.os.Build
 import android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
@@ -24,18 +25,28 @@ object Rainbow {
 
     private var isLightNavigationBar = false
 
-    internal fun setupThemeOverlays(
+    fun setupThemeOverlays(
         activity: Activity?,
         themeOverlays: IntArray,
         isLightStatusBar: Boolean,
         isLightNavigationBar: Boolean
     ) {
-        if (!Arrays.equals(this.themeOverlays, themeOverlays)) {
+        if (!this.themeOverlays.contentEquals(themeOverlays)) {
             this.themeOverlays = themeOverlays
             this.isLightStatusBar = isLightStatusBar
             this.isLightNavigationBar = isLightNavigationBar
             activity?.recreate()
         }
+    }
+
+    fun initThemeOverlays(context: Context?, themeOverlays: IntArray) {
+        themeOverlays.forEach { res ->
+            val a = context?.obtainStyledAttributes(res, R.styleable.SystemBarLightMode)
+            isLightStatusBar = a?.getBoolean(R.styleable.SystemBarLightMode_isLightStatusBar, false) ?: false
+            isLightNavigationBar = a?.getBoolean(R.styleable.SystemBarLightMode_isLightNavigationBar, false) ?: false
+            a?.recycle()
+        }
+        this.themeOverlays = themeOverlays
     }
 
     fun applyThemeOverlays(activity: Activity) {
