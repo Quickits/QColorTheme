@@ -56,8 +56,12 @@ class MainApplication : Application() {
     }
 }
 ```
+### Theme switcher
 
-### Advance [option]
+* Option 1, Open `ThemeSwitcherFragment`
+* Option 2, Call `Rainbow.setupThemeOverlays(activity, pramery, sencondary)`
+
+### Advance [Optional]
 
 * Custom theme palette
 
