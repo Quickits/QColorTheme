@@ -2,9 +2,6 @@
 <resources>
 
     <style name="Theme.Rainbow.Light.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="isLightStatusBar">true</item>
-        <item name="isLightNavigationBar">true</item>
-
         <item name="toolbarStyle">@style/Widget.Rainbow.Toolbar.Dark</item>
         <item name="bottomNavigationView">@style/Widget.MaterialComponents.BottomNavigationView</item>
         <item name="bottomNavigationViewColored">@style/Widget.MaterialComponents.BottomNavigationView.Colored</item>

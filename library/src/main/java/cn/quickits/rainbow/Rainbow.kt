@@ -5,9 +5,8 @@ import android.content.Context
 import android.graphics.Color
 import android.os.Build
 import android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
-import androidx.annotation.StyleRes
-import java.util.*
 import android.view.View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+import androidx.annotation.StyleRes
 
 
 /**
@@ -39,14 +38,12 @@ object Rainbow {
         }
     }
 
-    fun initThemeOverlays(context: Context?, themeOverlays: IntArray) {
-        themeOverlays.forEach { res ->
-            val a = context?.obtainStyledAttributes(res, R.styleable.SystemBarLightMode)
-            isLightStatusBar = a?.getBoolean(R.styleable.SystemBarLightMode_isLightStatusBar, false) ?: false
-            isLightNavigationBar = a?.getBoolean(R.styleable.SystemBarLightMode_isLightNavigationBar, false) ?: false
-            a?.recycle()
-        }
-        this.themeOverlays = themeOverlays
+    fun initThemeOverlays(context: Context?, primary: Int, secend: Int) {
+        val a = context?.obtainStyledAttributes(primary, R.styleable.SystemBarLightMode)
+        isLightStatusBar = a?.getBoolean(R.styleable.SystemBarLightMode_isLightStatusBar, false) ?: false
+        isLightNavigationBar = a?.getBoolean(R.styleable.SystemBarLightMode_isLightNavigationBar, false) ?: false
+        a?.recycle()
+        this.themeOverlays = intArrayOf(primary, secend)
     }
 
     fun applyThemeOverlays(activity: Activity) {

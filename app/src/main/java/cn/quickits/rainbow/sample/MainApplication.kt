@@ -14,7 +14,8 @@ class MainApplication : Application() {
         super.onCreate()
         Rainbow.initThemeOverlays(
             this,
-            intArrayOf(R.style.ThemeOverlay_PrimaryPalette_White, R.style.ThemeOverlay_SecondaryPalette_Yellow)
+            R.style.ThemeOverlay_PrimaryPalette_White,
+            R.style.ThemeOverlay_SecondaryPalette_Brown
         )
     }
 }
