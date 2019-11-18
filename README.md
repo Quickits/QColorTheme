@@ -41,7 +41,7 @@ dependencies {
 </style>
 ```
 
-### Init theme palette
+### Init theme
 
 ```kotlin
 class MainApplication : Application() {
@@ -56,6 +56,21 @@ class MainApplication : Application() {
     }
 }
 ```
+
+### Apply theme
+
+```kotlin
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        Rainbow.applyThemeOverlays(this) // apply theme
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+
+}
+```
+
 ### Theme switcher
 
 * Option 1, Open `ThemeSwitcherFragment`
