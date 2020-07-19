@@ -4,9 +4,9 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.collection.ArrayMap
-import cn.quickits.arch.mvvm.base.BaseFragment
 import cn.quickits.rainbow.R
 import cn.quickits.rainbow.Rainbow
+import cn.quickits.talos.app.BaseFragment
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import kotlinx.android.synthetic.main.fragment_switcher.*

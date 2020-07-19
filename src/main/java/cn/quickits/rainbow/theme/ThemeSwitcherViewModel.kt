@@ -3,8 +3,8 @@ package cn.quickits.rainbow.theme
 import android.content.Context
 import android.content.res.Resources
 import android.graphics.Color
-import cn.quickits.arch.mvvm.QLceViewModel
 import cn.quickits.rainbow.R
+import cn.quickits.talos.app.lce.LceViewModel
 
 
 /**
@@ -13,7 +13,7 @@ import cn.quickits.rainbow.R
  * @author: gavinliu
  * @create: 2019-05-14 17:17
  **/
-class ThemeSwitcherViewModel : QLceViewModel<List<ThemeValue>>() {
+class ThemeSwitcherViewModel : LceViewModel<List<ThemeValue>>() {
 
     fun load(context: Context, resource: Resources) {
         displayLoader(false)

@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/demoFragment"
-        android:name="cn.quickits.rainbow.sample.DemoFragment"
+        android:name="cn.quickits.mod.feature.rainbow.pkg.DemoFragment"
         android:label="DemoFragment">
         <action
             android:id="@+id/action_demoFragment_to_themeSwitcherFragment"
