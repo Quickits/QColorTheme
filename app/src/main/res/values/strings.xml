@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Rainbow</string>
-
-    <string name="cat_bottom_nav_alarm">Alarm</string>
-    <string name="cat_bottom_nav_clock">Clock</string>
-    <string name="cat_bottom_nav_timer">Timer</string>
-    <string name="cat_bottom_nav_stopwatch">Stopwatch</string>
-
-</resources>
